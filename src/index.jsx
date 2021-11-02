@@ -6,9 +6,11 @@ import Header from './components/Header';
 import Dashboard from './components/Dashboard';
 import smartHomeData from './smartHomeData';
 
+
+
 const App = () => (
   <>
-    <div class="container">
+    <div className="container">
       <Header title="chytrý dům" />
       <Dashboard data={smartHomeData}/>
 

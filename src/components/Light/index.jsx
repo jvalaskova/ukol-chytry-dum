@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import LightOn from './imagesLight/light-on.svg';
-import LightOff from './imagesLight/light-off.svg';
+import LightOnImg from './imagesLight/light-on.svg';
+import LightOffImg from './imagesLight/light-off.svg';
+import './style.css';
 
 const Light = ({name, state}) => {
 
@@ -8,9 +9,9 @@ const Light = ({name, state}) => {
 
     const handleClick = () => {
         if (bulbState === 'on') {
-            setBulbState(LightOn)
+            setBulbState('off');
         } else {
-            setBulbState(LightOff)
+            setBulbState('on');
         }
     }
 
@@ -18,7 +19,7 @@ const Light = ({name, state}) => {
         <>
         <div className="light" onClick={handleClick}>
             <div className="light__icon">
-                <img src={state ? LightOn : LightOff} />
+                <img src={bulbState==='on' ? LightOnImg : LightOffImg} />
             </div>
 
             <div className="light__name">
